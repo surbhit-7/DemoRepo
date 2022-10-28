@@ -1,0 +1,8 @@
+public MobilePlan read1(Long id) {
+		Optional<MobilePlan> currentMobilePlan = mobilePlanDao.findById(id);
+		if (currentMobilePlan.isPresent()) {
+			return currentMobilePlan.get();
+		}else {
+			return null;
+		}
+	}
